@@ -113,23 +113,4 @@ public class Seven {
         }
         return oneMax > zeroMax;
     }
-
-    //1876. Substrings of Size Three with Distinct Characters
-    //https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/
-    public int countGoodSubstrings(String s) {
-        if(s.length() == 1) return 0;
-        int count = 0;
-        String str = "";
-        String[] strArr = s.split("");
-        for(int i = 0; i < strArr.length; i++){
-            if(i == strArr.length - 2) break;
-            str += strArr[i] + strArr[i + 1] + strArr[i + 2] + ",";
-        }
-        strArr = str.split(",");
-        for(int i = 0; i < strArr.length; i++){
-            int a = (int) Arrays.stream(strArr[i].split("")).distinct().count();
-            if(strArr[i].length() == a) count++;
-        }
-        return count;
-    }
 }
