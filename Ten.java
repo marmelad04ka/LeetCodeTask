@@ -106,6 +106,14 @@ public class Ten {
         return sum;
     }
 
-    //
-    //
+    //338. Counting Bits
+    //https://leetcode.com/problems/counting-bits/description/
+    public int[] countBits(int n) {
+        int[] arr = new int[n + 1];
+        final char ch = '1';
+        for(int i = 0; i <= n; i++){
+            arr[i] = (int) Integer.toBinaryString(i).chars().filter(x -> x == ch).count();
+        }
+        return arr;
+    }
 }
