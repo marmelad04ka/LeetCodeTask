@@ -120,9 +120,21 @@ public class Eleven {
         return day;
     }
 
-    //
-    //
-
+    //1304. Find N Unique Integers Sum up to Zero
+    //https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/description/
+    public int[] sumZero(int n) {
+        int[] arr = new int[n];
+        for(int i = 0; i < arr.length; i++){
+            if(i%2 == 1){
+                arr[i] = arr[i - 1] * -1;
+                continue;
+            }
+            int num = (int) (i + ( Math.random() * (i + n * 100000) ));
+            arr[i] = num;
+        }
+        if(n%2 == 1) arr[arr.length - 1] = 0;
+        return arr;
+    }
 
     //
     //
