@@ -41,9 +41,15 @@ public class Eleven {
         return list;
     }
 
-    //
-    //
-
+    //657. Robot Return to Origin
+    //https://leetcode.com/problems/robot-return-to-origin/description/
+    public boolean judgeCircle(String moves) {
+        int countLeft = moves.length() - moves.replaceAll("L", "").length();
+        int countRight = moves.length() - moves.replaceAll("R", "").length();
+        int countUp = moves.length() - moves.replaceAll("U", "").length();
+        int countDown = moves.length() - moves.replaceAll("D", "").length();
+        return countLeft == countRight && countUp == countDown;
+    }
 
     //
     //
