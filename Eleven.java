@@ -71,9 +71,19 @@ public class Eleven {
         return n%2 == 0;
     }
 
-    //
-    //
-
+    //1078. Occurrences After Bigram
+    //https://leetcode.com/problems/occurrences-after-bigram/description/
+    public String[] findOcurrences(String text, String first, String second) {
+        String[] strArr = text.split(" ");
+        String str = "";
+        for(int i = 0; i < strArr.length; i++){
+            if(i == strArr.length - 2) break;
+            if(strArr[i].equals(first) && strArr[i + 1].equals(second)) str += strArr[i + 2] + ",";
+        }
+        if(str.equals("")) return new String[0];
+        str = str.replaceAll(",", " ");
+        return str.split(" ");
+    }
 
     //
     //
