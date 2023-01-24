@@ -85,9 +85,40 @@ public class Eleven {
         return str.split(" ");
     }
 
-    //
-    //
-
+    //1154. Day of the Year
+    //https://leetcode.com/problems/day-of-the-year/description/
+    public int dayOfYear(String date) {
+        String[] strArr = date.split("-");
+        int day = 0, feb = 28;
+        if(Integer.parseInt(strArr[0]) != 1900 && Integer.parseInt(strArr[0])%4 == 0) feb = 29;
+        switch (strArr[1]){
+            case "01": day = Integer.parseInt(strArr[2]);
+                break;
+            case "02": day = 31 + Integer.parseInt(strArr[2]);
+                break;
+            case "03": day = 31 + feb + Integer.parseInt(strArr[2]);
+                break;
+            case "04": day = 31 + feb + 31 + Integer.parseInt(strArr[2]);
+                break;
+            case "05": day = 31 + feb + 31 + 30 +Integer.parseInt(strArr[2]);
+                break;
+            case "06": day = 31 + feb + 31 + 30 + 31 +Integer.parseInt(strArr[2]);
+                break;
+            case "07": day = 31 + feb + 31 + 30 + 31 + 30 +Integer.parseInt(strArr[2]);
+                break;
+            case "08": day = 31 + feb + 31 + 30 + 31 + 30 + 31 +Integer.parseInt(strArr[2]);
+                break;
+            case "09": day = 31 + feb + 31 + 30 + 31 + 30 + 31 + 31 +Integer.parseInt(strArr[2]);
+                break;
+            case "10": day = 31 + feb + 31 + 30 + 31 + 30 + 31 + 31 + 30 +Integer.parseInt(strArr[2]);
+                break;
+            case "11": day = 31 + feb + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 +Integer.parseInt(strArr[2]);
+                break;
+            case "12": day = 31 + feb + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 +Integer.parseInt(strArr[2]);
+                break;
+        }
+        return day;
+    }
 
     //
     //
