@@ -65,9 +65,11 @@ public class Eleven {
         return Integer.parseInt(String.join("", str), 2);
     }
 
-    //
-    //
-
+    //1025. Divisor Game
+    //https://leetcode.com/problems/divisor-game/description/
+    public boolean divisorGame(int n) {
+        return n%2 == 0;
+    }
 
     //
     //
