@@ -51,9 +51,19 @@ public class Eleven {
         return countLeft == countRight && countUp == countDown;
     }
 
-    //
-    //
-
+    //1009. Complement of Base 10 Integer
+    //https://leetcode.com/problems/complement-of-base-10-integer/description/
+    public int bitwiseComplement(int n) {
+        String[] str = Integer.toString(n, 2).split("");
+        for(int i = 0; i < str.length; i++){
+            if(str[i].equals("1")){
+                str[i] = "0";
+                continue;
+            }
+            if(str[i].equals("0")) str[i] = "1";
+        }
+        return Integer.parseInt(String.join("", str), 2);
+    }
 
     //
     //
