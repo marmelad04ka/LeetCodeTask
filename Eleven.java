@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Eleven {
     //349. Intersection of Two Arrays
@@ -23,9 +25,21 @@ public class Eleven {
         return arr;
     }
 
-    //
-    //
-
+    //728. Self Dividing Numbers
+    //https://leetcode.com/problems/self-dividing-numbers/description/
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        List<Integer> list = new ArrayList<>();
+        for(int i = left; i <= right; i++){
+            int count = 0;
+            int[] arr = Integer.toString(i).chars().map(c -> c - '0').toArray();
+            for(int j = 0; j < arr.length; j++){
+                if(arr[j] == 0) continue;
+                if(i%arr[j] == 0) count++;
+            }
+            if(count == arr.length) list.add(i);
+        }
+        return list;
+    }
 
     //
     //
