@@ -140,6 +140,9 @@ public class Eleven {
     //https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan&id=sql-i
     //select product_id from Products where low_fats = 'Y' and recyclable   = 'Y';
 
-    //
-    //
+    //595. Big Countries
+    //https://leetcode.com/problems/big-countries/description/?envType=study-plan&id=sql-i
+//    Select name, population, area
+//    From World
+//    Where population >= 25000000 OR area >= 3000000;
 }
