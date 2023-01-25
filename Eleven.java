@@ -136,9 +136,9 @@ public class Eleven {
         return arr;
     }
 
-    //
-    //
-
+    //1757. Recyclable and Low Fat Products
+    //https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan&id=sql-i
+    //select product_id from Products where low_fats = 'Y' and recyclable   = 'Y';
 
     //
     //
