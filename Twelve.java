@@ -12,8 +12,11 @@ public class Twelve {
 //    Where id NOT IN (Select customerId from Orders);
 
 
-    //
-    //
+    //1741. Find Total Time Spent by Each Employee
+    //https://leetcode.com/problems/find-total-time-spent-by-each-employee/description/
+//    Select event_day AS day, emp_id, SUM(out_time - in_time ) as 'total_time'
+//    From Employees
+//    Group By event_day, emp_id;
 
 
     //
