@@ -19,8 +19,12 @@ public class Twelve {
 //    Group By event_day, emp_id;
 
 
-    //
-    //
+    //1729. Find Followers Count
+    //https://leetcode.com/problems/find-followers-count/description/
+//    Select user_id, Count(follower_id) as followers_count
+//    From Followers
+//    Group By user_id
+//    Order by user_id;
 
 
     //
