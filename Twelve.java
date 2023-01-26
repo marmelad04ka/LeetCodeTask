@@ -47,9 +47,11 @@ public class Twelve {
 //    From Person p1, Person p2
 //    Where p1.email = p2.email and p1.id > p2.id;
 
-    //
-    //
-
+    //175. Combine Two Tables
+    //https://leetcode.com/problems/combine-two-tables/description/
+//    Select firstName, lastName, city, state
+//    from Person left join Address
+//    using (personId);
 
     //
     //
