@@ -53,8 +53,11 @@ public class Twelve {
 //    from Person left join Address
 //    using (personId);
 
-    //
-    //
+    //1484. Group Sold Products By The Date
+    //https://leetcode.com/problems/group-sold-products-by-the-date/description/?envType=study-plan&id=sql-i
+//    Select sell_date, count(distinct product) as num_sold, group_concat(distinct product) as products
+//    from activities
+//    group by sell_date;
 
 
     //
