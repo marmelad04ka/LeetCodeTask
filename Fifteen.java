@@ -28,26 +28,61 @@ public class Fifteen {
 //    on reservation_id = Reservations.id
 //    group by room_id ;
 
-    //
-    //
+    //Отсортируйте список компаний (таблица Company) по их названию в алфавитном порядке и выведите первые две записи.
+//    select *
+//    from Company
+//    order by name
+//    limit 2;
 
+    //Выведите начало (поле start_pair) и окончание (поле end_pair) второго и третьего занятия из таблицы Timepair.
+//    select start_pair, end_pair
+//    from Timepair
+//    limit 1,2;
 
-    //
-    //
+    //Выведите количество полётов каждого пассажира, представленного в таблице Passenger.
+    // Список полётов находится в таблице Pass_in_trip. В качестве результата выведите количество полётов (используйте псевдоним count) и имя пассажира.
+//    select (
+//            select count(id)
+//    from Pass_in_trip
+//    where passenger = Passenger.id ) as count, name
+//    from Passenger;
 
+    //Выведите названия товаров из таблицы Goods (поле good_name), которые ещё ни разу не покупались ни одним из членов семьи (таблица Payments).
+//    select good_name
+//    from Goods
+//    where good_id not in (select good from Payments);
 
-    //
-    //
+    //Удалите все записи из таблицы Payments, используя оператор DELETE.
+//    delete from Payments;
 
+    //Удалить запись из таблицы Goods, у которой поле good_name равно "milk"
+//    delete
+//    from Goods
+//    where good_name = 'milk';
 
-    //
-    //
+    //Выведите имена (поле member_name) всех членом семьи (таблица FamilyMembers) в верхнем регистре. Для вывода имени используйте псевдоним name.
+//    select Upper(member_name) as name
+//    from FamilyMembers;
 
+    //Выведите идентификаторы (поле good_id) всех товаров, дополнив идентификаторы незначащими нолями слева до 2-х знаков.
+//    SELECT Lpad(good_id,2,'0') as ids FROM Goods
 
-    //
-    //
+    //В базе данных имена и фамилии всех членов семьи (таблица FamilyMembers) хранятся в формате "имя фамилия" (поле member_name). Необходимо их разделить и вывести только имена.
+//    SELECT Left(member_name, instr(member_name, ' ')-1) as firstName FROM FamilyMembers
 
+    //Выведите среднюю стоимость бронирования для комнат, которых бронировали хотя бы один раз. Среднюю стоимость необходимо округлить до целого значения вверх.
+//    select room_id, ceiling(avg(price)) as 'avg_price'
+//    from Reservations
+//    group by room_id ;
 
-    //
-    //
+    //Выведите id тех комнат, которые арендовали нечетное количество раз.
+    // В качестве результата выведите id комнаты и количество раз сколько ее брали в аренду (используйте псевдоним count).
+//    select room_id, count(room_id) as 'count'
+//    from Reservations
+//    group by room_id
+//    having count%2 = 1;
+
+    //Вывести имя и возраст для всех членов семьи. Для вывода имени и возраста используйте псевдонимы member_name и age соответственно.
+//    SELECT member_name, TIMESTAMPDIFF(year, birthday , curdate())   AS age
+//    FROM FamilyMembers;
 }
