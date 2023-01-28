@@ -47,4 +47,10 @@ public class Fourteen {
 //    select plane, avg(TIMESTAMPDIFF(second, time_out, time_in)) as 'time'
 //    from trip
 //    group by plane;
+
+    //Выведите идентификатор комнаты (поле room_id), среднюю стоимость за один день аренды (поле price, для вывода используйте псевдоним avg_price), а также количество резерваций этой комнаты (используйте псевдоним count). Полученный результат отсортируйте в порядке убывания сначала по количеству резерваций, а потом по средней стоимости.
+//    select room_id, avg(price) as 'avg_price', count(room_id) as 'count'
+//    from Reservations
+//    group by room_id
+//    order by count desc, avg_price desc;
 }
