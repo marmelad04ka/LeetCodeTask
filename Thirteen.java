@@ -32,17 +32,36 @@ public class Thirteen {
 //    group by class
 //    having count(student) >= 5;
 
-    //
-    //
+    //176. Second Highest Salary
+    //https://leetcode.com/problems/second-highest-salary/description/?envType=study-plan&id=sql-i
+//    select max(salary) as SecondHighestSalary
+//    from employee
+//    where salary < (select max(salary) from employee);
 
+    //1965. Employees With Missing Information
+    //https://leetcode.com/problems/employees-with-missing-information/description/?envType=study-plan&id=sql-i
+//    select employee_id
+//    from employees
+//    where employee_id not in (select employee_id from salaries)
+//    union
+//    select employee_id
+//    from salaries
+//    where employee_id not in (select employee_id from employees)
+//    order by employee_id;
 
-    //
-    //
-
-
-    //
-    //
-
+    //1795. Rearrange Products Table
+    //https://leetcode.com/problems/rearrange-products-table/description/?envType=study-plan&id=sql-i
+//    select product_id, 'store1' as store, store1 as price
+//    from products
+//    where store1 is Not Null
+//            Union
+//    select product_id, 'store2' as store, store2 as price
+//    from products
+//    where store2 is Not Null
+//            union
+//    select product_id, 'store3' as store, store3 as price
+//    from products
+//    where store3 is Not Null;
 
     //
     //
