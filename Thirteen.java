@@ -63,9 +63,12 @@ public class Thirteen {
 //    from products
 //    where store3 is Not Null;
 
-    //
-    //
-
+    //182. Duplicate Emails
+    //https://leetcode.com/problems/duplicate-emails/description/
+//    select email as Email
+//    from person
+//    group by email
+//    having count(email) > 1;
 
     //
     //
