@@ -26,4 +26,28 @@ public class Sixteen {
 //    group by name
 //    HAving BALANCE > 10000;
 
+    //1890. The Latest Login in 2020
+    //https://leetcode.com/problems/the-latest-login-in-2020/description/
+//    Select user_id, max(time_stamp) as last_stamp
+//    from Logins
+//    Where time_stamp like '2020%'
+//    group by user_id;
+
+    //1050. Actors and Directors Who Cooperated At Least Three Times
+    //https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times/description/
+//    select actor_id, director_id
+//    from ActorDirector
+//    group by actor_id, director_id
+//    having count(timestamp) >= 3;
+
+    //1393. Capital Gain/Loss
+    //https://leetcode.com/problems/capital-gainloss/description/
+//    select stock_name, Sum(
+//            case
+//              when operation like 'Buy' then -price
+//              when operation like 'sell' then price
+//            end
+//    ) as 'capital_gain_loss'
+//    from stocks
+//    group by stock_name
 }
