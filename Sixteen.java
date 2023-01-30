@@ -50,4 +50,27 @@ public class Sixteen {
 //    ) as 'capital_gain_loss'
 //    from stocks
 //    group by stock_name
+
+    //Сколько и кто из семьи потратил на развлечения (entertainment). Вывести статус в семье, имя, сумму
+    //https://sql-academy.org/ru/trainer/tasks/20
+//    select status, member_name, sum(amount * unit_price) as costs
+//    from FamilyMembers
+//    join Payments on FamilyMembers.member_id = Payments.family_member
+//    join Goods on Payments.good = Goods.good_id
+//    join GoodTypes on Goods.type = GoodTypes.good_type_id
+//    where good_type_name = 'entertainment'
+//    GROUP by status, member_name;
+
+    //607. Sales Person
+    //https://leetcode.com/problems/sales-person/?envType=study-plan&id=sql-i
+//    select name
+//    from SalesPerson
+//    where sales_id not in(
+//            select sales_id
+//            from Orders
+//            where com_id = (
+//              select com_id
+//              from Company
+//              where name = 'Red'))
+
 }
