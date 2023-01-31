@@ -73,4 +73,18 @@ public class Sixteen {
 //              from Company
 //              where name = 'Red'))
 
+    //1141. User Activity for the Past 30 Days I
+    //https://leetcode.com/problems/user-activity-for-the-past-30-days-i/description/?envType=study-plan&id=sql-i
+//    select activity_date as 'day', count(distinct user_id) as 'active_users'
+//    from Activity
+//    where datediff('2019-07-27', activity_date) < 30 And activity_date <= '2019-07-27'
+//    group by activity_date;
+
+    //How can you produce a list of facilities, with each labelled as 'cheap' or 'expensive' depending on if their monthly maintenance cost is more than $100?
+    // Return the name and monthly maintenance of the facilities in question.
+    //https://www.pgexercises.com/questions/basic/classify.html
+//    select name, case when (monthlymaintenance > 100) then 'expensive'
+//            else 'cheap'
+//    end as cost
+//    from cd.facilities;
 }
