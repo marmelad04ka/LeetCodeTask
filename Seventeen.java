@@ -28,12 +28,10 @@ public class Seventeen {
 
     //Найти самый близкий квадрат к числу
     public int nonFun(int num){
-        int sqrtSmall = 0, small, big, result = 0;
+        int sqrtSmall = 0, result = 0;
         for(int i = 1, j = 3; i <= num + num; i+=j, j+=2){
             if(i > num){
-                small = num - sqrtSmall;
-                big = i - num;
-                result = small > big? i: sqrtSmall;
+                result = num - sqrtSmall > i - num? i: sqrtSmall;
                 break;
             }
             sqrtSmall = i;
