@@ -25,4 +25,19 @@ public class Seventeen {
         String rts = new StringBuffer(x).reverse().toString();
         return x.equals(rts);
     }
+
+    //Найти самый близкий квадрат к числу
+    public int nonFun(int num){
+        int sqrtSmall = 0, small, big, result = 0;
+        for(int i = 1, j = 3; i <= num + num; i+=j, j+=2){
+            if(i > num){
+                small = num - sqrtSmall;
+                big = i - num;
+                result = small > big? i: sqrtSmall;
+                break;
+            }
+            sqrtSmall = i;
+        }
+        return num > 0? result:0;
+    }
 }
